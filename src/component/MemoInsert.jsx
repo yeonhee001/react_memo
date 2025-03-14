@@ -44,7 +44,7 @@ function MemoInsert({setData,data}) {
         // [...data,entries] 점3개 찍으면 data 안에 있는 값을 꺼내올 수 있다
         
         
-        axios.post('http://localhost:3000/memo/m2',entries)
+        axios.post(`${process.env.REACT_APP_APIURL}/memo/m2`,entries)
         .then(()=>{
           setData([...data,entries]);
         })
