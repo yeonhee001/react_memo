@@ -13,7 +13,11 @@ function Memo() {
   // console.log(data);
 
   useEffect(()=>{
-    axios.get(`${process.env.REACT_APP_APIURL}/memo/m1`)
+    axios.get(`${process.env.REACT_APP_APIURL}/memo/m1`,{
+      headers:{"Context-Type":"application/json"}
+      // 베르셀 배포 과정에서 타입정의를 안하면 막는다는 에러에 headers를 추가해야함
+      // axios.get(,config) : config는 중괄호 형태로 넣어야함
+    })
     .then((res)=>{
       setData(res.data);
     })
