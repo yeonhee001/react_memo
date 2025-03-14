@@ -1,0 +1,48 @@
+p,figure,ul,li,body{margin: 0; list-style: none; padding: 0;}
+header{
+    background-color: gray;
+    margin: 0 auto;
+    text-align: center;
+    a{
+        color: white;
+        padding: 20px 30px;
+        display: inline-block;
+    }
+    a.active{color: aquamarine;}
+}
+main{
+    width: 80%;
+    margin: 60px auto;
+    div{
+        .insert{
+            position: fixed;
+            right: 0; top: 6.5%;
+            width: 300px;
+            background-color: antiquewhite;
+            padding: 30px;
+            border-radius: 16px;
+            display: none;
+            &.active{display: block;}
+            textarea,input{
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                box-sizing: border-box;
+            }
+            textarea{height: 200px;}
+        }
+    }
+}
+.list{
+    >div{
+        width: 250px;
+        background-color: rgb(176, 242, 213);
+        padding: 20px;
+        margin: 20px 0;
+        >div{
+            font-size: 12px;
+        }
+        
+        p{font-size: 14px;}
+    }
+}
